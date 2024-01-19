@@ -1,0 +1,35 @@
+:root {
+    --heart-fill: #008000; /* Green color */
+    --glow-fill: rgba(0, 128, 0, .5); /* Green glow color */
+  }
+  
+  .heart .shape.-layer::before,
+  .heart .shape.-layer::after,
+  .heart .shape.-layer {
+    background: var(--heart-fill);
+    transition: background .3s ease-out;
+  }
+  
+  .heart .glow {
+    box-shadow: 0 0 var(--glow-size) var(--glow-fill);
+  }
+  
+  .heart .glow.--excited {
+    --glow-fill: rgba(0, 128, 0, .7); /* Green excited glow color */
+  }
+  
+  .heart:hover {
+    --heart-fill: #00ff00; /* Light green on hover */
+  }
+  
+  .heart:active {
+    --heart-fill: #90ee90; /* Light green on active state */
+  }
+  
+  .background.--light {
+    background: #008080; /* Darker green background */
+    box-shadow: inset 0 0 15vw var(--shade-5);
+  }
+  
+  .body:active .background.--dark { opacity: 1; }
+  
